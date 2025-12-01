@@ -31,13 +31,14 @@ export const getBookByIdController = (req, res) => {
     const bookData = req.body
     const newBook = createBook(bookData);
     
-    res.success(newBook, 'User fetched successfully', 201);
+    res.success(newBook, 'Book created successfully', 201);
 
   }
 
 // update a book
 export const updateBookController = (req, res) => {
       const bookData = req.body;
+      const id = parseInt(req.params.id);
       const updatedBook = updateBook(id, bookData);
   
   if (!updatedBook) {
