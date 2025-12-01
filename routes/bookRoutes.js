@@ -1,6 +1,6 @@
 import  { Router } from "express"
-import { authenticate } from '../middleware/auth.js';
-import { validateBook } from '../middleware/validation.js';
+import { authenticate } from '../middlewares/auth.js';
+import { validateBook } from '../middlewares/validation.js';
 import { createBookController, deleteBookController, getAllBooksController, getAvailableBooksController, getBookByIdController, getBooksByAuthorController, searchBooksController, updateBookController } from "../controllers/bookController.js";
 
 const bookRouter = Router();

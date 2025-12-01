@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createBorrowController, getAllBorrowsController, getBorrowByIdController, getOverdueBorrowController, returnBookController } from "../controllers/borrowController";
-import { validateBorrow } from '../middleware/validation.js'; 
+import { createBorrowController, getAllBorrowsController, getBorrowByIdController, getOverdueBorrowController, returnBookController } from "../controllers/borrowController.js";
+import { validateBorrow } from '../middlewares/validation.js'; 
 
 const borrowRouter = Router();
 

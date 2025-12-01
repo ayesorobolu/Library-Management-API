@@ -1,8 +1,8 @@
-import { getAllBorrows,getBorrowById,createBorrow,returnBook, getOverdueBorrow} from "../services/borrow.js";
+import { getAllBorrow, getBorrowById, createBorrow, returnBorrow, getOverdueBorrow} from "../services/borrow.js";
 
 // Get all borrow records
 export const getAllBorrowsController = (req, res) => {
-  const borrows = getAllBorrows(); 
+  const borrows = getAllBorrow(); 
   res.success(borrows, "Borrow records retrieved successfully");
 };
 
@@ -36,7 +36,7 @@ export const createBorrowController = (req, res) => {
  // Return a borrowed book
 export const returnBookController = (req, res) => {
   const borrowId = parseInt(req.params.id);
-  const result = returnBook(borrowId);
+  const result = returnBorrow(borrowId);
   
   if (result.error) {
     return res.error(result.error, 400);

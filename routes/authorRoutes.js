@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { authenticate } from '../middleware/auth.js';
-import { validateAuthor } from '../middleware/validation.js';
+import { authenticate } from '../middlewares/auth.js';
+import { validateAuthor } from '../middlewares/validation.js';
 import { createAuthorController, deleteAuthorController, getAllAuthorsController, getAuthorByIdController, updateAuthorController } from "../controllers/authorController.js";
 
 const authorRouter = Router();

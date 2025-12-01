@@ -1,5 +1,5 @@
-import { getBookById } from "../services/book.js";
-import { getAuthorById } from "../services/author.js";
+import { getBookById } from "../services/books.js";
+import { getAuthorById } from "../services/authors.js";
 
 //Validate book data
 export const validateBook = (req, res, next) => {
